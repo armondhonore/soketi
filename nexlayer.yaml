@@ -1,0 +1,13 @@
+application:
+  name: soketi
+  pods:
+  - name: app
+    image: quay.io/soketi/soketi:latest-16-alpine
+    path: /
+    servicePorts:
+    - 6001
+    vars:
+      SOKETI_DEFAULT_APP_ID: "nexlayer-app"
+      SOKETI_DEFAULT_APP_KEY: "nexlayer-key"
+      SOKETI_DEFAULT_APP_SECRET: "nexlayer-secret"
+      SOKETI_DEBUG: "0"
